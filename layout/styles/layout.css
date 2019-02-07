@@ -107,7 +107,6 @@
 	background-size:cover;
 	background-position:bottom right;
 }
-
 .headerImgTwo{
 		background-size:cover;
 		background-position: top right;
@@ -118,6 +117,42 @@ img.left{
   position: absolute;
   height: 100%;
   width: auto;
+}
+
+.infoboxes li{
+  padding:25px 0 0 0;
+  text-align:center;
+}
+.infoboxes li *{
+  margin:0;
+  line-height:1.6;
+}
+.infoboxes article{
+  display:block;
+  position:relative;
+  padding:35px 20px 25px 20px;
+  color:#393D40;
+  background-color:rgba(255,255,187,0.65);
+}
+.infoboxes article i{
+  display:inline-block;
+  position:absolute;
+  top:0;
+  left:50%;
+  width:50px;
+  height:50px;
+  line-height:50px;
+  margin:-25px 0 0 -25px;
+  font-size:18px;
+  z-index:1;
+}
+.infoboxes article .fa{
+  font-size:18px;
+  color:#F1EDEA;
+  background-color:#EE7500;
+}
+.infoboxes article:hover{
+  background-color:#F1EDEA;
 }
 
 input[type=text], select, textarea {
@@ -163,6 +198,10 @@ input[type=text], select, textarea {
 	color: white;
 }
 
+.sectiontitle{
+  margin-bottom:80px;
+}
+
 .smallHero #pageintro{
 	padding:100px 0;
 }
@@ -174,53 +213,50 @@ input[type=text], select, textarea {
   text-align:left;
 }
 
-.sectiontitle{margin-bottom:80px;}
-.sectiontitle *{margin:0;}
-
-.infoboxes{}
-.infoboxes li{padding:25px 0 0 0; text-align:center;}
-.infoboxes li:last-child{margin-bottom:0;}/* Used when elements stack in small viewports */
-.infoboxes li *{margin:0; padding:0; line-height:1.6;}
-.infoboxes article{display:block; position:relative; padding:35px 20px 25px 20px;}
-.infoboxes article i{display:inline-block; position:absolute; top:0; left:50%; width:50px; height:50px; line-height:50px; margin:-25px 0 0 -25px; font-size:18px; z-index:1;}
-.infoboxes article .fa{font-size:18px;}
-
-/* Footer
---------------------------------------------------------------------------------------------------------------- */
 #footer{padding:80px 0;}
-
 #footer .heading{margin-bottom:50px; font-size:1.2rem;}
-
 #footer nav{margin-bottom:30px; text-transform:uppercase;}
 #footer nav ul{}
 #footer nav ul li{display:inline-block; margin-right:20px;}
 #footer nav ul li:last-child{margin-right:0;}
-
 #footer .linklist li{display:block; margin-bottom:15px; padding:0 0 15px 0; border-bottom:1px solid;}
 #footer .linklist li:last-child{margin:0; padding:0; border:none;}
 #footer .linklist li::before, #footer .linklist li::after{display:table; content:"";}
 #footer .linklist li, #footer .linklist li::after{clear:both;}
-
 #footer .contact{}
 #footer .contact.linklist li, #footer .contact.linklist li:last-child{position:relative; padding-left:40px;}
 #footer .contact li *{margin:0; padding:0; line-height:1.6;}
 #footer .contact li i{display:block; position:absolute; top:0; left:0; width:30px; font-size:16px; text-align:center;}
+#footer nav a{
+	color:#F1EDEA;
+}
+#footer nav li:first-child a, #footer nav a:hover{
+	color:#EE7500;
+}
 
-
-/* Copyright
---------------------------------------------------------------------------------------------------------------- */
 #copyright{padding:20px 0;}
 #copyright *{margin:0; padding:0;}
 
-/* Navigation
---------------------------------------------------------------------------------------------------------------- */
 nav ul, nav ol{margin:0; padding:0; list-style:none;}
 
 #mainav, #breadcrumb, .sidebar nav{line-height:normal;}
 #mainav .drop::after, #mainav li li .drop::after, #breadcrumb li a::after, .sidebar nav a::after{
 	position:absolute; font-family:"FontAwesome"; font-size:10px; line-height:10px;}
-
-/* Top Navigation */
+#mainav li a{
+	color:#393D40;
+}
+#mainav a:active, #mainav a:hover, #mainav li:hover > a{
+	color:#EE7500;
+}
+#mainav li li a{
+	color:#F1EDEA;
+	background-color:rgba(238,117,0,.7);
+	border-color:rgba(0,0,0,.1);
+}
+#mainav li li:hover > a{
+	color:#F3FFFC;
+	background-color:#EE7500;
+}
 #mainav{}
 #mainav ul{text-transform:uppercase;}
 #mainav ul ul{z-index:9999; position:absolute; width:180px; text-transform:none;}
@@ -237,33 +273,23 @@ nav ul, nav ol{margin:0; padding:0; list-style:none;}
 #mainav li li .drop::after{top:15px; left:5px;}
 #mainav ul ul{visibility:hidden; opacity:0;}
 #mainav ul li:hover > ul{visibility:visible; opacity:1;}
-
 #mainav form{display:none; margin:0; padding:0;}
 #mainav form select, #mainav form select option{display:block; cursor:pointer; outline:none;}
 #mainav form select{width:100%; padding:5px; border:1px solid;}
 #mainav form select option{margin:5px; padding:0; border:none;}
 
-
-/* Tables
---------------------------------------------------------------------------------------------------------------- */
 table, th, td{border:1px solid; border-collapse:collapse; vertical-align:top;}
 table, th{table-layout:auto;}
 table{width:100%; margin-bottom:15px;}
 th, td{padding:5px 8px;}
 td{border-width:0 1px;}
 
-
-/* Font Awesome Social Icons
---------------------------------------------------------------------------------------------------------------- */
 .faico{margin:0; padding:0; list-style:none;}
 .faico li{display:inline-block; margin:8px 5px 0 0; padding:0; line-height:normal;}
 .faico li:last-child{margin-right:0;}
 .faico a{display:inline-block; width:36px; height:36px; line-height:36px; font-size:18px; text-align:center;}
-
 .faico a{color:#FFFFFF; background-color:rgba(207,72,69,.5)/* #CF4845 */;}
 
-/* Colours
---------------------------------------------------------------------------------------------------------------- */
 body{
 	color:#393D40;
 	background-color:#636363;
@@ -272,7 +298,6 @@ body{
 a{
 	color:#EE7500;
 }
-
 a:active, a:focus, a:hover{
 	background:transparent;
 	color:#636363
@@ -290,43 +315,8 @@ input:focus, textarea:focus, *:required:focus{border-color:#CF4845;}
 	background-color:#EE7500;
 	border-color:#D69764;
 }
-
 .btn:hover, .btn.inverse{
 	color:#393D40;
 	background-color:#F1EDEA;
-	border-color:393D40;}
-
-/* Content Area */
-.infoboxes article{color:#191919; background-color:rgba(255,255,255,.65);}
-.infoboxes article:hover{background-color:#FFFFFF;}
-.infoboxes article .fa{color:#FFFFFF; background-color:#CF4845;}
-
-
-/* Footer */
-#footer nav a{
-	color:#F1EDEA;
-}
-
-#footer nav li:first-child a, #footer nav a:hover{
-	color:#EE7500;
-}
-
-/* Navigation */
-#mainav li a{
-	color:#393D40;
-}
-
-#mainav a:active, #mainav a:hover, #mainav li:hover > a{
-	color:#EE7500;
-}
-
-#mainav li li a{
-	color:#F1EDEA;
-	background-color:rgba(238,117,0,.7);
-	border-color:rgba(0,0,0,.1);
-}
-
-#mainav li li:hover > a{
-	color:#F3FFFC;
-	background-color:#EE7500;
+	border-color:393D40;
 }
